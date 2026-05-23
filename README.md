@@ -309,7 +309,7 @@ Topical + oral nicotinamide operate through several converging mechanisms:[^marq
 [^hakozaki-2002-niacinamide-melanosome-transfer-pigmentation]: Hakozaki T, Minwalla L, Zhuang J, Chhoa M, Matsubara A, Miyamoto K, et al.<br>
     [The effect of niacinamide on reducing cutaneous pigmentation and suppression of melanosome transfer](https://doi.org/10.1046/j.1365-2133.2002.04834.x).<br>
     *British Journal of Dermatology*. 2002;147(1):20–31.<br>
-    <span class="badge badge-n">n=120</span> <span class="badge badge-outcome" title="Mechanism endpoint — cellular or molecular readout (gene expression, protein activity), more upstream than a surrogate.">mechanism</span> <span class="badge badge-funding">💵 Procter & Gamble</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 458</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2002</span>
+    <span class="badge badge-n">n=120</span> <span class="badge badge-outcome" title="Mechanism endpoint — cellular or molecular readout (gene expression, protein activity), more upstream than a surrogate.">mechanism</span> `💵 Procter & Gamble` <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 458</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2002</span>
 
 [^mainville-2022-nicotinamide-skin-cancer-chemoprophylaxis-meta]: Mainville L, Smilga A-S, Fortin PR.<br>
     [Effect of Nicotinamide in Skin Cancer and Actinic Keratoses Chemoprophylaxis, and Adverse Effects Related to Nicotinamide: A Systematic Review and Meta-Analysis](https://doi.org/10.1177/12034754221078201).<br>
@@ -319,7 +319,7 @@ Topical + oral nicotinamide operate through several converging mechanisms:[^marq
 [^migaud-2024-nad-metabolism-targeting-challenges-review]: Migaud ME, Ziegler M, Baur JA.<br>
     [Regulation of and challenges in targeting NAD+ metabolism](https://doi.org/10.1038/s41580-024-00752-w).<br>
     *Nature Reviews Molecular Cell Biology*. 2024;25(10):822–840.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 92</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
+    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> `💵 undisclosed` <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 92</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
 
 [^kapala-2022-isotretinoin-adverse-events-meta]: Kapała J, Lewandowska J, Placek W, Owczarczyk-Saczonek A.<br>
     [Adverse Events in Isotretinoin Therapy: A Single-Arm Meta-Analysis](https://doi.org/10.3390/ijerph19116463).<br>
