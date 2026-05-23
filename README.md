@@ -1,328 +1,210 @@
 ---
-title: "Nicotinamide (niacinamide)"
+title: "Senolytics"
 audit-log:
-  - date: '2026-05-18'
-    method: 4-sweep audit — wikipedia/grokipedia, openalex 2020-2026, synthesis (cochrane/AAD/NCCN/EADV/WHO-EML/ITP/DrugAge), trusted commentators (Lab Muffin, Patrick, Attia, Huberman, Blueprint)
-    note: surfaced 4 high-priority gaps wired in — Hui 2020 Clin Exp Ophthalmol (n=57 crossover RCT, 219 cites) opening the glaucoma neuroprotection use case Wikipedia centers but the article didn't cover; Migaud 2024 Nat Rev Mol Cell Biol (92 cites) modern NAD+ metabolism synthesis updating Verdin 2015 + flagging that age-related NAD+ decline is mild (~30%) and inconsistent + NMN's FDA investigational-drug status; Schmults 2024 NCCN BCC guideline (111 cites) endorsing nicotinamide chemoprevention with 20% BCC reduction citation; Kandolf 2024 EADV/EuroGuiDerm AK + cSCC guideline (67 cites) more cautious framing citing both Chen 2015 + Allen 2023 + the German S3 non-recommendation for AK chemoprevention. Added a Glaucoma neuroprotection section + a Formal guideline status subsection showing the US-vs-EU divergence. Confirmed absences worth noting in prose — no Cochrane SR specifically on nicotinamide; no AAD nicotinamide-chemoprevention guideline; no ITP nicotinamide lifespan testing; no DrugAge mammalian nicotinamide lifespan data; no human aging-clock RCT on nicotinamide. Commentator sweep — Lab Muffin has no dedicated niacinamide deep dive (mentioned across 3 tangential posts); Patrick NAD+ topic page cites 6 DOIs (Mills 2016 NMN mouse, Liu 2018 NAD flux, Costford 2009 exercise NAMPT, Long 2015 NMN Alzheimer's mouse, Johnson 2018 NAD review, Beneke 2000 PARP1) — zero on human nicotinamide chemoprevention; Attia no nicotinamide-specific coverage; Huberman/Soleymani Aug 2024 cited Chen 2015 only (already in article); Bryan Johnson Blueprint takes NR (not nicotinamide) — directly illustrates the article's "longevity influencers pick the expensive precursor" framing.
+  - date: '2026-05-23'
+    method: 4-sweep audit — Wikipedia + Grokipedia cross-check, synthesis resources (Cochrane + NIA ITP + DrugAge), OpenAlex canonical-recent, FoundMyFitness + Attia popular-source check
+    note: 6 papers wired in; net effect deflationary.
 ---
 
-**Nicotinamide** and **niacinamide** are two names for the same molecule — the amide form of vitamin B3 (pyridine-3-carboxamide). The dual naming is a marketing artifact: "nicotinamide" derives from the historical isolation by oxidation of nicotine (Huber 1867; different molecule, different effects); "niacinamide" was coined in the 1940s by the American Medical Association and food/vitamin industry specifically to dodge public association with tobacco when fortifying flour and bread with B vitamins.[^marques-2024-niacinamide-multiple-functions-mechanism] Medical research and Cochrane/PubMed/FDA use "nicotinamide"; consumer skincare brands (Olay, The Ordinary) and supplement bottles use "niacinamide." Same molecule, same NAD+ precursor mechanism via the salvage pathway.[^marques-2024-niacinamide-multiple-functions-mechanism][^verdin-2015-nad-aging-neurodegeneration] Distinct from **niacin** (nicotinic acid, the flushing form of vitamin B3) and from the more proximal NAD+ precursors **NMN + NR** marketed separately for longevity.[^verdin-2015-nad-aging-neurodegeneration]
-
-Three main use cases anchor the evidence: **oral nicotinamide for non-melanoma skin cancer chemoprevention** (Chen 2015 ONTRAC, Phase 3 RCT, 23% NMSC reduction in immunocompetent high-risk patients — but Allen 2023 ONTRAC-2 found NO effect in transplant recipients, and the pooled meta-analysis is consistent with no significant effect; NCCN 2024 BCC guideline endorses it cautiously, EADV 2024 AK guideline more cautious still).[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^allen-2023-ontrac-2-nicotinamide-transplant-recipients][^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury][^schmults-2024-nccn-basal-cell-carcinoma-guideline][^kandolf-2024-eadv-actinic-keratosis-guideline] **Topical niacinamide for skin appearance** (Bissett 2004 5% face-half RCT; widely marketed as a \$6 cosmeceutical ingredient by P&G/Olay + The Ordinary + others) is much more popular but rests on weaker evidence — Lau 2024 explicitly excluded niacinamide from its Grade A/B/C cosmeceutical grading for lack of qualifying RCTs.[^bissett-2004-topical-niacinamide-aging-facial-skin][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^lau-2024-cosmeceuticals-antiaging-systematic-review] **Oral nicotinamide for glaucoma neuroprotection** (Hui 2020 crossover RCT, n=57, 1.5–3.0 g/day improves inner retinal function on PhNR electroretinography in glaucoma patients already on IOP therapy) opens a third use case mostly absent from popular skincare discourse but established in ophthalmology.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-For the broader skin-aging context see [skin](../organ/skin.md). NAD+ precursors (including nicotinamide) are classified as **caloric-restriction mimetics** per Madeo's 2019 framework — same autophagy-activating mechanism class as rapamycin, metformin, spermidine — though the empirical evidence that NAD+ supplementation reproduces fasting's longevity benefits in humans is weak. See [caloric restriction and fasting](caloric-restriction-and-fasting.md) for the framework context.[^verdin-2015-nad-aging-neurodegeneration]
+Senolytics are drugs that selectively kill senescent cells — cells that have entered permanent cell-cycle arrest but remain metabolically active and secrete a pro-inflammatory mix of cytokines, proteases, and growth factors (the senescence-associated secretory phenotype, SASP).[^coppe-2008-sasp-secretory-phenotype][^childs-2015-cellular-senescence-aging] The animal evidence is genuinely strong: genetically clearing senescent cells in normal-aging mice extends median lifespan ~25%, and the senolytic drug pair dasatinib + quercetin extends late-life survival when started in old mice.[^baker-2016-naturally-occurring-p16-lifespan][^xu-2018-senescent-cells-physical-dysfunction] Human evidence is early and, so far, underwhelming — open-label trials in idiopathic pulmonary fibrosis and diabetic kidney disease show the drugs reduce senescent-cell burden, but the first placebo-controlled trial found no functional benefit, the lead industry program (UNITY's UBX0101) failed in osteoarthritis, and there is no clinical-outcome or lifespan data in healthy adults.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney][^nambiar-2023-senolytics-ipf-rct][^chaib-2022-senolytics-path-to-clinic] The central live questions: whether intermittent clearance helps people without a defined disease, and whether removing senescent cells is safe given that senescence also suppresses tumors and aids wound healing.[^campisi-2013-aging-senescence-cancer]
 
 ## What it is
 
-**Nicotinamide (= niacinamide)** is the amide form of vitamin B3.[^marques-2024-niacinamide-multiple-functions-mechanism][^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review] Vitamin B3 has two main forms:[^marques-2024-niacinamide-multiple-functions-mechanism][^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]
+Cellular senescence is one of the hallmarks of aging.[^lopez-otin-2023-hallmarks-aging-update] Cells enter senescence in response to DNA damage, oncogene activation, telomere attrition, or mitochondrial dysfunction; they exit the cell cycle, resist apoptosis, and accumulate with age.[^childs-2015-cellular-senescence-aging] The SASP — IL-6, IL-8, MCP-1, MMPs, growth factors — propagates senescence to neighboring cells, drives chronic low-grade inflammation ("inflammaging"), and contributes to multiple age-related pathologies.[^coppe-2008-sasp-secretory-phenotype]
 
-| Form | Common names | Notable property |
+Senescent cells survive by upregulating **senescent-cell anti-apoptotic pathways (SCAPs)** — notably the BCL-2 family (Bcl-xL) and PI3K–AKT survival signaling. Senolytics transiently inhibit these pathways, tipping senescent cells (which depend on them) into apoptosis while sparing normal cells. Because the effect is to *eliminate* a cell population rather than occupy a receptor, senolytics are given **intermittently** ("hit-and-run" dosing) rather than continuously — intermittent dosing is as effective as continuous for reducing senescent-cell burden, and the short human half-lives of dasatinib (~4 h), quercetin (~11 h), and fisetin (~3–4 h) suit brief pulses.[^zhu-2015-senolytic-discovery-d-q][^chaib-2022-senolytics-path-to-clinic]
+
+| Class | Mechanism | Notes |
 |---|---|---|
-| Nicotinic acid | niacin | Flushing reaction at oral doses ≥30mg (vasodilation via prostaglandin D2)[^marques-2024-niacinamide-multiple-functions-mechanism] |
-| **Nicotinamide** | **niacinamide**, NAA, vitamin B3 amide | **No flushing** — better tolerated; the form used in chemoprevention + skincare[^marques-2024-niacinamide-multiple-functions-mechanism][^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention] |
-
-Both convert to **NAD+ (nicotinamide adenine dinucleotide)** — the central cofactor for redox reactions, energy production (ATP synthesis), DNA repair (PARP1 substrate), and sirtuin signaling (SIRT1 substrate).[^verdin-2015-nad-aging-neurodegeneration][^imai-2000-sir2-nad-deacetylase][^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review] Nicotinamide enters the **salvage pathway** via NAMPT (nicotinamide phosphoribosyltransferase) → NMN → NAD+; this is the dominant NAD+ synthesis route in mammalian cells.[^verdin-2015-nad-aging-neurodegeneration][^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]
-
-**Distinct from the longevity-marketed NAD+ precursors**:[^verdin-2015-nad-aging-neurodegeneration]
-
-- **NMN (nicotinamide mononucleotide)** and **NR (nicotinamide riboside)** are more proximal salvage-pathway intermediates; both convert to NAD+ via fewer enzymatic steps than nicotinamide. Marketed at 10–50× higher cost.[^verdin-2015-nad-aging-neurodegeneration]
-- The human RCT evidence base for NMN + NR is much smaller than for nicotinamide; both raise plasma NAD+ in healthy adults (Martens 2018 NR 1 g/day raised blood NAD+ ~60% at 6 weeks in n=30; Igarashi 2022 NMN 250 mg/day raised blood NAD+ at 12 weeks in n=42 older Japanese men with improved gait speed + grip strength) but **no Phase 3 clinical outcome trials exist for either**.[^martens-2018-nicotinamide-riboside-healthy-adults-nad][^igarashi-2022-nmn-chronic-supplementation-blood-nad-older]
-- Nicotinamide is the cheap, well-established alternative the NMN/NR conversation rarely centers.[^verdin-2015-nad-aging-neurodegeneration]
-
-**Dietary sources** of vitamin B3: meat (chicken, beef, fish), grains (whole grains, fortified cereals), legumes, dairy.[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta] **Tryptophan is a dietary precursor** at ~60:1 conversion ratio (60mg dietary tryptophan → 1mg niacin equivalent).[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta] Dietary deficiency causes **pellagra** — dermatitis, diarrhea, dementia, death — historically associated with corn-dominant diets where niacin is bound in unavailable form. Pellagra is rare today in developed countries due to flour fortification (which adoption catalyzed the "niacinamide" naming chosen to avoid public anti-nicotine sentiment).[^marques-2024-niacinamide-multiple-functions-mechanism]
+| **Dasatinib + quercetin (D+Q)** | Dasatinib hits tyrosine-kinase/PI3K-dependent survival; quercetin hits BCL-2/Bcl-xL — broader together than either alone | Dasatinib is an FDA-approved leukemia drug; quercetin a dietary flavonoid; the most-studied senolytic combination[^zhu-2015-senolytic-discovery-d-q] |
+| **Fisetin** | Flavonoid engaging pro-apoptotic pathways in senescent cells | Natural senolytic, consumer-accessible; reduced senescence markers and extended lifespan in one mouse study,[^yousefzadeh-2018-fisetin-senolytic] but the NIA ITP found **no lifespan extension and no senescent-cell clearance** at 600 ppm across three sites and two dosing schedules[^harrison-2023-itp-fisetin-astaxanthin] |
+| **Navitoclax (ABT-263)** and other BCL-2 inhibitors | Direct BCL-2/Bcl-xL/Bcl-w inhibition; senolytic but **cell-type-restricted** (kills senescent endothelial cells and fibroblasts, not preadipocytes) | Potent in some senescent cell types; dose-limiting thrombocytopenia (Bcl-xL is essential for platelet survival) restricts systemic human use[^zhu-2016-navitoclax-senolytic] |
+| **Tissue-targeted senolytics** (UBX-series, FOXO4-DRI peptide) | Local delivery or targeted SCAP disruption to limit off-target effects | UBX1325/foselutoclax (a BCL-xL senolytic) is delivered **intravitreally** for retinal vascular disease — the most clinically-advanced tissue-targeted senolytic, in early trials for diabetic macular edema and neovascular AMD[^macha-2024-ubx1325-erg-namd] |
+| **Cardiac glycosides** (digoxin, ouabain) | Inhibit the Na+/K+ ATPase → membrane depolarization and acidification, to which senescent cells are preferentially vulnerable; broad-spectrum | Repurposing interest (both are approved heart drugs), but a narrow therapeutic index and the CG-insensitivity of rodent cells preclude standard mouse-lifespan validation; preclinical only[^triana-martinez-2019-cardiac-glycosides-senolytic] |
+| **Immunological senolytics** (CAR T cells) | Chimeric antigen receptor T cells targeting uPAR, a cell-surface antigen broadly induced on senescent cells — a "living drug" rather than a small molecule | Extended survival in tumour-bearing mice and reversed liver fibrosis; preclinical, and carries the cost and toxicity profile of cell therapy[^amor-2020-senolytic-car-t] |
 
 ## Research history
 
-- **1867** — Huber isolates nicotinic acid by oxidizing nicotine (tobacco alkaloid) — establishes the name "nicotinic acid" → later "nicotinamide" for the amide form.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **1937** — Conrad Elvehjem identifies nicotinic acid as the pellagra-curing factor in liver extract; **niacin = vitamin B3** established.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **1940s** — **American Medical Association coins "niacin" + "niacinamide"** to enable flour + bread fortification without public objection to "nicotine-related" naming. Consumer term diverges from medical term.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **2000** — **Imai et al.** *Nature* publish foundational work showing **Sir2 (SIRT1 homolog) is a NAD+-dependent histone deacetylase** — establishes the molecular link between NAD+ availability and longevity-relevant cellular signaling.[^imai-2000-sir2-nad-deacetylase]
-- **2002** — **Hakozaki et al.** (Procter & Gamble) publish the foundational mechanism paper showing **niacinamide blocks melanosome transfer from melanocytes to keratinocytes** (35–68% inhibition in vitro) — distinct from vit C's tyrosinase inhibition or hydroquinone's melanocyte toxicity. Two clinical trials (n=18 Japanese + n=120 white women) confirm clinical hyperpigmentation reduction.[^hakozaki-2002-niacinamide-melanosome-transfer-pigmentation]
-- **2004** — **Bissett et al.** (P&G/Olay) publish the foundational topical niacinamide RCT for broader anti-aging — 5% topical niacinamide split-face trial in n=50 Caucasian women, 12 weeks: improved fine lines, hyperpigmented spots, texture, red blotchiness, yellowing. Procter & Gamble-sponsored; supports Olay Total Effects marketing.[^bissett-2004-topical-niacinamide-aging-facial-skin]
-- **2015** — **Chen et al.** *NEJM* publish **ONTRAC** — Phase 3 double-blind RCT in n=386 patients with ≥2 prior NMSC: **oral nicotinamide 500mg twice daily reduced new non-melanoma skin cancers by 23%** (95% CI 4–38%, p=0.02) over 12 months. Effect dissipates after discontinuation.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention] **Verdin** publishes the *Science* synthesis of NAD+ + aging + neurodegeneration — the foundational modern framework for NAD+ as a longevity-relevant target.[^verdin-2015-nad-aging-neurodegeneration]
-- **2018** — **Martens et al.** *Nature Communications* establish that **nicotinamide riboside (NR) 1 g/day raises blood NAD+ by ~60% at 6 weeks** in healthy older adults (n=30) — the most-cited human NR biomarker trial; opens the NAD+ precursor supplementation pathway.[^martens-2018-nicotinamide-riboside-healthy-adults-nad]
-- **2020** — **Nikas et al.** synthesize the broader cancer chemoprevention + radiotherapy adjunct evidence for nicotinamide — NMSC (per Chen 2015), head/neck SCC, laryngeal, urinary bladder cancers all have some Phase 3 evidence.[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]
-- **2021** — **Boo** publishes the modern mechanism + clinical synthesis specifically for skin aging + pigmentation applications.[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-- **2020** — **Hui et al.** *Clin Exp Ophthalmol* establish nicotinamide as a glaucoma neuroprotective adjunct: crossover RCT (n=57, 1.5–3.0 g/day over 12 weeks per arm) improves inner retinal function on PhNR electroretinography in glaucoma patients already on IOP-lowering therapy. Mechanism: NAD+ replenishment supports retinal ganglion cell mitochondrial function.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-- **2022** — **Mainville et al.** publish the first comprehensive nicotinamide skin-cancer chemoprophylaxis meta-analysis (29 trials reviewed; 5 contributing to primary outcome) — concludes "evidence remains weak."[^mainville-2022-nicotinamide-skin-cancer-chemoprophylaxis-meta] **Igarashi et al.** *npj Aging* show NMN 250 mg/day for 12 weeks raises blood NAD+ + improves gait speed + grip strength in older Japanese men (n=42) — the most-cited NMN human RCT.[^igarashi-2022-nmn-chronic-supplementation-blood-nad-older]
-- **2024** — **Migaud et al.** publish the modern *Nature Reviews Mol Cell Biol* flagship synthesis on NAD+ metabolism + targeting challenges (92 cites) — supersedes Verdin 2015 with honest framing that age-related NAD+ decline is "mild (~30%) and not entirely consistent" between individuals.[^migaud-2024-nad-metabolism-targeting-challenges-review] **Schmults et al.** publish the NCCN BCC guideline endorsing nicotinamide for chemoprevention (20% BCC reduction).[^schmults-2024-nccn-basal-cell-carcinoma-guideline] **Kandolf et al.** publish the EADV/EuroGuiDerm European S3 AK + cSCC guideline citing both Chen 2015 + Allen 2023 with cautious framing (the German S3 explicitly does NOT recommend chemoprevention for AK).[^kandolf-2024-eadv-actinic-keratosis-guideline]
-- **2023** — **Allen et al. ONTRAC-2** (NEJM, n=158 organ transplant recipients) — same dose, same population (≥2 prior keratinocyte cancers), but immunosuppressed: **NO effect** on new keratinocyte cancers (rate ratio 1.0, 95% CI 0.8–1.3, p=0.96). Trial stopped early for poor recruitment. The negative replication that complicates the Chen 2015 framing.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients] **Tosti et al.** meta-analyze 4 RCTs and find **pooled RR 0.82 (95% CI 0.61–1.12) — consistent with no significant effect** when immunocompetent + immunosuppressed populations are combined.[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- **2024** — **Marques et al.** publish a comprehensive *Antioxidants* mechanism synthesis covering niacinamide's NAD+ + DNA repair + antioxidant + anti-inflammatory + barrier + ECM + anti-pigmentation + antimicrobial roles in skin.[^marques-2024-niacinamide-multiple-functions-mechanism] **Lau et al.** cosmeceuticals SR explicitly **excludes niacinamide** from Grade A/B/C grading for lack of qualifying RCTs — the absence is informative.[^lau-2024-cosmeceuticals-antiaging-systematic-review]
-- **2026** — **Tan E & Williams HC** publish critical appraisal *"Nicotinamide for Skin Cancer Chemoprevention: The Jury Was Out and Still is"* — argues the divergence between Chen 2015 + Allen 2023 + null pooled estimates means nicotinamide chemoprevention "is not yet confirmed" and "caution is warranted before widespread clinical adoption."[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
+The field moved from genetic proof-of-concept to drugs to first-in-human trials in under a decade:[^baker-2011-senescent-cells-clearance][^zhu-2015-senolytic-discovery-d-q][^baker-2016-naturally-occurring-p16-lifespan][^xu-2018-senescent-cells-physical-dysfunction][^justice-2019-senolytics-ipf]
 
-**Honest reading as of 2026**: nicotinamide's strongest evidence is in the narrow indication of NMSC chemoprevention in immunocompetent high-risk patients (Chen 2015 ONTRAC).[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury] The popular oral-supplement and topical-cosmeceutical use cases have weaker evidence than the marketing implies; Lau 2024's exclusion is the dermatology synthesis verdict.[^lau-2024-cosmeceuticals-antiaging-systematic-review] The current consensus per Tan E 2026 is that even the chemoprevention claim has not been firmly established at synthesis-grade evidence quality.[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
+- **2011** — Baker's INK-ATTAC transgenic mouse lets researchers genetically delete p16-positive senescent cells; clearing them delays age-related decline in a progeroid model — the first causal demonstration that senescent cells *drive* aging dysfunction, not just mark it.[^baker-2011-senescent-cells-clearance]
+- **2015** — Zhu identifies the first *pharmacological* senolytics (dasatinib + quercetin) by targeting the anti-apoptotic pathways senescent cells depend on — converting a genetic trick into a druggable strategy.[^zhu-2015-senolytic-discovery-d-q]
+- **2016** — Baker shows genetic clearance extends median lifespan ~25% in *normal-aging* (non-progeroid) mice, establishing the lifespan stakes.[^baker-2016-naturally-occurring-p16-lifespan]
+- **2018** — Xu's transplant experiment closes the causal loop (injecting senescent cells into young mice causes dysfunction) and shows D+Q extends late-life survival.[^xu-2018-senescent-cells-physical-dysfunction]
+- **2019** — the first two human senolytic trials report, moving the field from mice to (disease-population) patients.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney]
 
-## Human evidence — oral chemoprevention
+**Honest reading as of 2026.** The causal mouse biology is among the strongest in geroscience.[^baker-2016-naturally-occurring-p16-lifespan][^xu-2018-senescent-cells-physical-dysfunction] The translation gap is the whole story: human data are tiny, open-label, surrogate-endpoint, and in sick populations. Whether senolytics extend healthspan in humans — let alone healthy ones — is unproven.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney]
 
-### Chen 2015 ONTRAC — the foundational Phase 3 RCT
+## Animal evidence
 
-**Chen et al.** (Australian + New Zealand academic team, NHMRC-funded — clean COI) randomized n=386 patients with ≥2 prior non-melanoma skin cancers in the past 5 years to oral nicotinamide 500mg twice daily or placebo for 12 months.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention] Primary endpoint: rate of new NMSC at 12 months.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention] Results:[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
+| Study | Model | Finding |
+|---|---|---|
+| Baker 2011 | BubR1 progeroid mice + INK-ATTAC genetic clearance | Ablating p16+ cells delayed decline in fat, muscle, eye — first causal proof[^baker-2011-senescent-cells-clearance] |
+| Zhu 2015 | Cell + mouse screens | D+Q identified via senescent-cell SCAP vulnerabilities; cleared senescent cells in vitro and in vivo[^zhu-2015-senolytic-discovery-d-q] |
+| Baker 2016 | INK-ATTAC mice, **normal aging** | Genetic clearance extended median lifespan **+24–27%**, attenuated multiple age-related dysfunctions[^baker-2016-naturally-occurring-p16-lifespan] |
+| Xu 2018 | Senescent-cell transplant + aged mice | Transplanted senescent cells **cause** physical dysfunction in young mice; D+Q extended post-treatment survival **+36%** started in old age[^xu-2018-senescent-cells-physical-dysfunction] |
+| Yousefzadeh 2018 | Aged mice | **Fisetin** reduced senescence markers and extended health/lifespan with a favorable tolerability profile[^yousefzadeh-2018-fisetin-senolytic] — but the NIA ITP later found no lifespan or senescence-clearance effect (see below)[^harrison-2023-itp-fisetin-astaxanthin] |
 
-- **23% reduction in new NMSC** at 12 months (95% CI 4–38%, p=0.02)[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- 20% reduction in new SCC (p=0.05)[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- 11% reduction in new actinic keratoses (cumulative p<0.001)[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- **Effect dissipates within 6 months of discontinuation** — chemopreventive, not curative[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- AE profile similar to placebo; no serious adverse events[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- Clinical interpretation: a number-needed-to-treat (NNT) of ~6 patients to prevent 1 NMSC per year in this high-risk population[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
+The Baker 2016 normal-aging result (~25% median lifespan) is the keystone — a larger effect than rapamycin's ~10–14% in comparable mouse studies, though achieved by genetic ablation rather than a drug.[^baker-2016-naturally-occurring-p16-lifespan][^harrison-2009-itp-rapamycin-lifespan] Xu 2018's transplant arm is the cleanest causal demonstration in the field.[^xu-2018-senescent-cells-physical-dysfunction] **One caution is decisive**: the gold-standard NIA Interventions Testing Program (ITP) has reproduced rapamycin's lifespan benefit across multiple sites — but when it tested the senolytic **fisetin** (600 ppm, continuous and cyclic schedules, three sites), it found **no lifespan extension in either sex and no reduction in senescent-cell burden**, a null co-authored by the same investigators who first reported fisetin's senolytic effect.[^harrison-2023-itp-fisetin-astaxanthin] No senolytic *drug* (D+Q or fisetin) has an ITP-grade replicated lifespan result; the strongest lifespan claims rest on single-lab studies and on genetic, not pharmacological, clearance.[^harrison-2009-itp-rapamycin-lifespan][^harrison-2023-itp-fisetin-astaxanthin]
 
-Mechanism rationale (per Chen + downstream literature): nicotinamide replenishes UV-depleted NAD+ → maintains ATP availability → enhances DNA damage repair via PARP1; reduces UV-induced immunosuppression by restoring Langerhans cell function.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^verdin-2015-nad-aging-neurodegeneration][^marques-2024-niacinamide-multiple-functions-mechanism]
+## Human evidence
 
-### Allen 2023 ONTRAC-2 — the negative replication
+| Trial | Design | Finding |
+|---|---|---|
+| Justice 2019 (IPF) | Phase 1 open-label, n=14 idiopathic pulmonary fibrosis | First-in-human senolytic trial: D+Q (3 days on / 11 off × 3 cycles) improved physical-function measures (6-min walk, gait speed, sit-to-stand) at 4 weeks; no control arm[^justice-2019-senolytics-ipf] |
+| Nambiar 2023 (IPF) | Phase 1 **randomized, placebo-controlled**, n=12 idiopathic pulmonary fibrosis | The controlled follow-up to Justice 2019: D+Q feasible and tolerated, but **no meaningful between-group difference** in pulmonary, physical, or frailty measures, and ~3× more non-serious adverse events (sleep disturbance, anxiety). Feasibility-primary and underpowered for efficacy[^nambiar-2023-senolytics-ipf-rct] |
+| Hickson 2019 (DKD) | Open-label, n=9 diabetic kidney disease | D+Q reduced adipose-tissue senescent-cell burden (p16, p21, SASP factors fell) — biological proof of target engagement; no clinical-outcome data[^hickson-2019-senolytics-diabetic-kidney] |
 
-**Allen et al.** (NEJM, same Sydney team, NHMRC-funded) repeated the trial in organ transplant recipients (n=158) — same dose, same compound, same dermatology endpoint, different (immunosuppressed) population.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients] Result:[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
+A third first-in-human trial extended the approach to a neurodegenerative disease: **Gonzales 2023** (SToMP-AD, *Nat Med*, open-label, **n=5** mild Alzheimer's, 12-week intermittent D+Q). Its primary aim was CNS penetrance and feasibility, not efficacy — and it found dasatinib reached cerebrospinal fluid (4/5) but **quercetin did not**, with safety/feasibility supported but CSF GFAP (a reactive-astrogliosis marker) *increased* and no change in tau or brain volume.[^gonzales-2023-senolytics-alzheimers-phase1]
 
-- **No effect** on new keratinocyte cancers (rate ratio 1.0, 95% CI 0.8–1.3, p=0.96)[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-- 207 cancers in nicotinamide group vs 210 in placebo group at 12 months[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-- No significant between-group differences on SCC, BCC, AK counts, or quality of life[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-- Trial stopped early for poor recruitment — underpowered for smaller effects but rules out the Chen-2015-magnitude (23%) effect with high confidence[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-
-**The biological interpretation**: nicotinamide's chemopreventive mechanism likely requires intact immune surveillance — the precise pathway transplant patients lack on chronic immunosuppression. The Langerhans-cell restoration + UV-induced immunosuppression rescue that's plausibly central to Chen 2015's effect cannot operate when the immune compartment is pharmacologically suppressed.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-
-### Pooled synthesis — "jury is still out"
-
-**Tosti et al. 2023** meta-analyzed 4 RCTs (mixed immunocompetent + immunosuppressed populations) and found:[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-
-- **NMSC overall**: RR 0.82 (95% CI 0.61–1.12) — **consistent with no significant effect**[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- SCC: RR 0.81 (0.48–1.37) — not significant[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- BCC: RR 0.88 (0.50–1.55) — not significant[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-
-The pooled estimate's CI crosses 1.0 across all keratinocyte cancer types when immunocompetent + immunosuppressed are combined.[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta] Tosti et al. nonetheless conclude with a pragmatic "may consider in high-risk immunocompetent patients" recommendation given the favorable safety profile + low cost.[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-
-**Tan E & Williams 2026** critically appraise the evidence base (including a recent observational VA-veterans study reporting positive associations they argue is methodologically flawed) and conclude:[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-
-- The 2022 (Mainville, 29 trials with 5 contributing to primary outcome) and 2023 (Tosti, 4 RCTs strict-inclusion) meta-analyses both concluded "weak evidence" for chemoprevention[^mainville-2022-nicotinamide-skin-cancer-chemoprophylaxis-meta][^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-- The 2023 meta-analysis pooled estimate (RR 0.82, 95% CI 0.61–1.12) is "consistent with no significant effect"[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury][^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- Observational evidence (VA-veterans study) has unmeasured confounders + immortal time bias + exposure misclassification[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-- **"Current evidence does not yet confirm the chemopreventive efficacy of nicotinamide. Caution is warranted before its widespread clinical adoption — the jury, as it stands, is still out."**[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-
-This is the honest framing for 2026. Reasonable practice in dermatology clinics is to recommend oral nicotinamide 500mg BID to immunocompetent patients with extensive actinic damage or history of multiple NMSCs (low cost, low harm, plausible benefit), while NOT recommending it to immunosuppressed (transplant) patients where the negative replication is direct.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^allen-2023-ontrac-2-nicotinamide-transplant-recipients][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-
-### Formal guideline status (diverges by body)
-
-Two synthesis-grade guidelines published in 2024 take meaningfully different positions on nicotinamide chemoprevention despite reviewing similar evidence:[^schmults-2024-nccn-basal-cell-carcinoma-guideline][^kandolf-2024-eadv-actinic-keratosis-guideline]
-
-- **NCCN BCC guideline (Schmults 2024)** has a dedicated section "Nicotinamide in Reducing BCC Development" citing Chen 2015 + Chen 2016 (Phase 2 renal transplant) + Surjana 2012 (Phase 2 AKs): "Data from phase II and phase III randomized trials indicated that treatment of actinic keratoses with nicotinamide reduced the occurrence of new BCCs, specifically by 20% at 12-month follow-up." Lists nicotinamide alongside celecoxib + acitretin + capecitabine + tazarotene as chemoprevention options for high-risk patients.[^schmults-2024-nccn-basal-cell-carcinoma-guideline] **Notably doesn't address Allen 2023 ONTRAC-2** — likely outside literature cutoff for this version.[^schmults-2024-nccn-basal-cell-carcinoma-guideline]
-- **EADV/EuroGuiDerm AK + cSCC guideline (Kandolf 2024)** is more cautious — explicitly cites both Chen 2015 ONTRAC's 30% cSCC reduction in immunocompetent patients AND Allen 2023 ONTRAC-2's null effect in transplant recipients. Notes "no effect after nicotinamide discontinuation, and it is unclear if the preventive effects also pertain to AK." Points out that **the German S3 guideline does NOT recommend chemoprevention for AK**.[^kandolf-2024-eadv-actinic-keratosis-guideline]
-
-The US-vs-EU guideline divergence on the same evidence base is informative — Tan E 2026's "jury is still out" framing aligns more closely with Kandolf 2024 EADV than with Schmults 2024 NCCN.[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury][^kandolf-2024-eadv-actinic-keratosis-guideline][^schmults-2024-nccn-basal-cell-carcinoma-guideline]
-
-### Other cancer indications (brief)
-
-Beyond NMSC, **Phase 3 evidence supports nicotinamide as a radiotherapy adjunct** in head + neck squamous cell carcinoma, laryngeal cancer, and urinary bladder cancer — acts as an oxygen-mimetic radiosensitizer.[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review] Preclinical evidence in other cancers (breast, colon, pancreatic) is mostly not yet evidence-based.[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]
-
-## Human evidence — glaucoma neuroprotection
-
-**Hui 2020** (Melbourne ophthalmology consortium, *Clin Exp Ophthalmol*, 219 OpenAlex cites) established nicotinamide as a glaucoma neuroprotective adjunct via a **crossover double-masked RCT** in n=57 glaucoma patients already on IOP-lowering therapy.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct] Design: 6 weeks of 1.5 g/day NAM → 6 weeks of 3.0 g/day NAM → crossover to placebo. Endpoint: inner retinal function on photopic negative response (PhNR) electroretinography + visual field perimetry.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-**Key results:**[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-- **PhNR Vmax improved 14.8% (p=0.02) on nicotinamide vs 5.2% (p=0.27) on placebo** — significant functional preservation[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-- **PhNR Vmax ratio improved 12.6% (p=0.002) on nicotinamide** vs 3.6% on placebo[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-- **23% of participants improved beyond 95% coefficient-of-repeatability threshold on nicotinamide vs 9% on placebo**[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-- Visual field trend: 27% improved ≥1 dB mean deviation on NAM vs 4% deteriorated on placebo (p=0.02)[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-**Mechanism rationale**: glaucoma involves retinal ganglion cell mitochondrial dysfunction; NAM as NAD+ precursor replenishes RGC NAD+ → supports mitochondrial complex I activity → preserves ATP-dependent RGC function.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct][^migaud-2024-nad-metabolism-targeting-challenges-review] The proposed pathway parallels Pete Williams' (Karolinska, Hui 2020 co-author) mouse glaucoma work showing NAD+ depletion in RGCs precedes axon loss.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-**Dose caveat**: Hui 2020 used 1.5–3.0 g/day — **3–6× the Chen 2015 ONTRAC chemoprevention dose** (1 g/day), approaching the >3 g/day hepatotoxicity threshold noted in Marques 2024.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct][^marques-2024-niacinamide-multiple-functions-mechanism] PhNR is a surrogate endpoint, not long-term visual field preservation; longer-term trials underway.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct] Wikipedia centers this use case as one of 4 main medical uses for nicotinamide despite being absent from popular skincare-focused niacinamide discourse — established in ophthalmology, less visible in dermatology + longevity contexts.[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]
-
-## Human evidence — topical skincare
-
-### Bissett 2004 — the foundational topical RCT
-
-**Bissett et al.** (Procter & Gamble Beauty + Personal Care, Cincinnati — heavily industry-sponsored, supports Olay Total Effects marketing) ran a 12-week split-face RCT in n=50 Caucasian women with moderate facial photoaging: 5% niacinamide cream on one side vs vehicle on the other.[^bissett-2004-topical-niacinamide-aging-facial-skin] Results:[^bissett-2004-topical-niacinamide-aging-facial-skin]
-
-- Significant improvement on the niacinamide-treated side vs control side for: **fine lines/wrinkles, hyperpigmented spots, red blotchiness, skin yellowness, skin texture**[^bissett-2004-topical-niacinamide-aging-facial-skin]
-- Effect sizes modest (small fractions of 0–5 scale points) but consistently significant across multiple endpoints[^bissett-2004-topical-niacinamide-aging-facial-skin]
-- Tolerability good; no significant AEs[^bissett-2004-topical-niacinamide-aging-facial-skin]
-- Mechanism rationale: improved barrier function (ceramide synthesis); reduced melanosome transfer (anti-pigmentation); NAD+ replenishment (anti-redox-stress)[^bissett-2004-topical-niacinamide-aging-facial-skin][^marques-2024-niacinamide-multiple-functions-mechanism]
-
-### Modern mechanism synthesis
-
-**Boo 2021** + **Marques 2024** provide modern mechanism syntheses covering topical niacinamide's multimodal effects:[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^marques-2024-niacinamide-multiple-functions-mechanism]
-
-- **Barrier function**: stimulates ceramide + free fatty acid synthesis; reduces TEWL — the "moisturizer-like" effect underlying the popularity[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^marques-2024-niacinamide-multiple-functions-mechanism]
-- **Anti-pigmentation**: inhibits melanosome transfer from melanocytes to keratinocytes (different mechanism from vit C's tyrosinase inhibition or hydroquinone's melanocyte toxicity) — useful for melasma + PIH[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^marques-2024-niacinamide-multiple-functions-mechanism]
-- **Anti-inflammatory**: NF-κB inhibition reduces TNF-α + IL-1β + IL-6 + IL-8 cascade[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-- **Sebum reduction**: clinically validated for acne (Lab Muffin's centerpiece use case)[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **ECM preservation**: stimulates collagen + elastin synthesis; inhibits MMPs[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-
-### The Lau 2024 exclusion problem
-
-The **2024 Lau cosmeceuticals systematic review explicitly excluded niacinamide** from its Grade A/B/C grading "for lack of qualifying RCTs."[^lau-2024-cosmeceuticals-antiaging-systematic-review] This is the most-cited modern cosmeceutical grading framework — niacinamide didn't make the cut alongside retinol + topical vit C (Grade A), bakuchiol/growth factors (Grade C). The absence is informative: **the topical niacinamide evidence base is dominated by small industry-sponsored split-face RCTs (Bissett 2004 and many smaller P&G/Olay/L'Oréal trials)** that don't meet synthesis-grade RCT standards even when their pooled signal is real.[^lau-2024-cosmeceuticals-antiaging-systematic-review][^marques-2024-niacinamide-multiple-functions-mechanism]
-
-The popular framing — niacinamide as a \$6 "must-have" skincare ingredient — outpaces the evidence quality. The biology is plausible (NAD+ + barrier + anti-pigmentation + anti-inflammatory); the clinical effect sizes are likely real but modest; the synthesis-grade evidence has not caught up.[^marques-2024-niacinamide-multiple-functions-mechanism][^lau-2024-cosmeceuticals-antiaging-systematic-review]
+These early human trials are **proof-of-concept**: small (n=5–14), mostly open-label, surrogate endpoints, short follow-up, in *disease* populations. They establish that senolytics engage their target in humans (Hickson) and are broadly tolerable — but the lone **placebo-controlled** test found the open-label functional gains did *not* separate from placebo (Nambiar 2023), a caution against reading uncontrolled signals as efficacy.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney][^gonzales-2023-senolytics-alzheimers-phase1][^nambiar-2023-senolytics-ipf-rct] The quercetin-doesn't-cross-into-CSF finding is a further complication for brain-targeted D+Q.[^gonzales-2023-senolytics-alzheimers-phase1] More trials are underway — Alzheimer's[^gonzales-2023-senolytics-alzheimers-phase1] and retinal disease (UBX1325)[^macha-2024-ubx1325-erg-namd] among them — but the field also has its first clear human failure: UNITY's intra-articular **UBX0101** did not achieve its primary pain endpoint in a Phase 2 knee-osteoarthritis trial.[^chaib-2022-senolytics-path-to-clinic]
 
 ## Mechanism
 
-Topical + oral nicotinamide operate through several converging mechanisms:[^marques-2024-niacinamide-multiple-functions-mechanism][^verdin-2015-nad-aging-neurodegeneration][^imai-2000-sir2-nad-deacetylase][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
+Senescent cells resist their own apoptosis by upregulating SCAP networks — BCL-2/Bcl-xL, PI3K–AKT–FOXO, and p53/p21/serpine survival nodes. Senolytics work by **transiently disabling the specific survival dependency** of senescent cells, which sit closer to the apoptotic threshold than normal cells; a brief hit therefore preferentially kills them.[^zhu-2015-senolytic-discovery-d-q] Removing the cells eliminates their SASP, which is the proximate driver of paracrine senescence spread and inflammaging — so the downstream benefit is as much about silencing the secretory phenotype as about the cell count itself.[^coppe-2008-sasp-secretory-phenotype] In aged mice, clearing senescent cells — with fisetin, D+Q, or genetic ablation alike — reduced inflammation and roughly halved mortality from a β-coronavirus infection, direct evidence that removing the SASP source improves resilience to an acute stressor.[^camell-2021-senolytics-coronavirus-mortality]
 
-1. **NAD+ replenishment via salvage pathway** — nicotinamide → NMN (via NAMPT) → NAD+. Supports ATP synthesis, DNA repair (PARP1 substrate), and sirtuin-mediated gene regulation (SIRT1 substrate).[^verdin-2015-nad-aging-neurodegeneration][^imai-2000-sir2-nad-deacetylase] UV exposure depletes NAD+ in keratinocytes; nicotinamide replenishment maintains DNA repair capacity → mechanism for the Chen 2015 ONTRAC chemopreventive effect.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^marques-2024-niacinamide-multiple-functions-mechanism]
-
-2. **DNA damage repair enhancement** — PARP1 uses NAD+ as substrate to mark single-strand DNA breaks for repair; nicotinamide-driven NAD+ availability enhances this capacity.[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review][^marques-2024-niacinamide-multiple-functions-mechanism] Direct mechanism for chemoprevention rationale.
-
-3. **UV-induced immunosuppression rescue** — UV impairs Langerhans cell function + cytokine-mediated immune surveillance, which is one pathway by which UV-damaged keratinocytes escape immune clearance → carcinogenesis. Nicotinamide restores Langerhans cell function in human + animal models, the proposed key mechanism for Chen 2015's effect.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^marques-2024-niacinamide-multiple-functions-mechanism] This mechanism likely doesn't operate in pharmacologically immunosuppressed populations (transplant recipients) — directly explains the Allen 2023 ONTRAC-2 null result.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-
-4. **Antioxidant** — quenches ROS; supports glutathione recycling; tackles UV-driven oxidative damage that's a primary driver of photoaging.[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-
-5. **Anti-inflammatory** — NF-κB inhibition reduces TNF-α + IL-1β + IL-6 + IL-8 + iNOS cascade. Useful in acne, rosacea, post-procedural healing.[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-
-6. **Epidermal barrier function** — stimulates ceramide + sphingolipid + free fatty acid synthesis in keratinocytes; reduces transepidermal water loss; supports stratum corneum integrity.[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical] Mechanism for "moisturizer-like" effects underlying the popular skincare-ingredient framing.
-
-7. **Anti-pigmentation via melanosome transfer inhibition** — niacinamide does NOT inhibit tyrosinase (unlike vit C) or kill melanocytes (unlike hydroquinone) — instead it **blocks the transfer of mature melanosomes from melanocytes to surrounding keratinocytes** (Hakozaki 2002 foundational P&G primary: 35–68% in vitro inhibition + clinical hyperpigmentation reduction in n=18 Japanese + n=120 white women).[^hakozaki-2002-niacinamide-melanosome-transfer-pigmentation][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^marques-2024-niacinamide-multiple-functions-mechanism] Different mechanism layer; complementary to vit C + hydroquinone for combination treatment of melasma + PIH.
-
-8. **Sirtuin and PARP1 dual role** — at low concentrations, nicotinamide is a substrate for NAD+ synthesis (enhances SIRT1 + PARP1 activity); at high concentrations, it directly inhibits SIRT1 + PARP1 enzymes.[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review] Concentration-dependent dual mechanism — context-specific cellular effects (e.g., promotes apoptosis in cancer cells at high doses while supporting DNA repair in normal cells at physiological doses). Not clearly clinically dose-titrable today but mechanistically interesting.
-
-**Key contrast with NMN + NR**: all three converge on NAD+ via the salvage pathway, but nicotinamide is the most upstream + cheapest precursor. NMN + NR are more proximal but the clinical-outcome evidence is much smaller; nicotinamide has the only Phase 3 RCT data for a clinical disease endpoint (Chen 2015 ONTRAC NMSC chemoprevention).[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention] The "NMN/NR is better than nicotinamide" claim popular in longevity discourse rests primarily on biomarker (plasma NAD+) data — **Martens 2018** showed NR 1 g/day raises blood NAD+ by ~60% in healthy older adults at 6 weeks (n=30), and **Igarashi 2022** showed NMN 250 mg/day raises NAD+ + improves gait speed/grip strength at 12 weeks in older Japanese men (n=42) — but neither has produced clinical disease outcomes.[^martens-2018-nicotinamide-riboside-healthy-adults-nad][^igarashi-2022-nmn-chronic-supplementation-blood-nad-older] Migaud 2024 notes that **age-related NAD+ decline is mild (~30%) and not entirely consistent between individuals**, and **few head-to-head NR vs NMN comparisons exist in rodents, NONE in humans** — challenging the longevity-discourse "NAD+ collapse causes aging" framing and the "NR is better than NMN" marketing.[^migaud-2024-nad-metabolism-targeting-challenges-review] **NMN is an FDA-regulated investigational drug** under DSHEA since 2022, ineligible for US dietary supplement distribution; NR has different regulatory status (granted dietary ingredient before investigational drug status).[^migaud-2024-nad-metabolism-targeting-challenges-review]
+The same biology is the source of the field's central risk. Senescence is not purely pathological: it is a **tumor-suppressive** program (arresting damaged cells that might otherwise become cancerous) and participates in wound healing and tissue remodeling.[^campisi-2013-aging-senescence-cancer] Indiscriminate, chronic senescent-cell clearance could in principle impair these protective functions — a reason the intermittent "hit-and-run" schedule (clear, then let the system recover) is mechanistically as well as practically preferred.[^campisi-2013-aging-senescence-cancer]
 
 ## Practical use
 
-### Oral dosing
-
-- **500 mg twice daily** is the Chen 2015 ONTRAC chemoprevention dose; same dose used in Allen 2023 ONTRAC-2. Standard recommendation for immunocompetent patients with history of multiple NMSCs.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- Available OTC as **vitamin B3 (niacinamide) supplements**, typically 500mg tablets, \$5–15/month.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **Effect dissipates after discontinuation** — chemopreventive use requires sustained intake; not a one-course intervention.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- **Not recommended for immunosuppressed populations** (organ transplant recipients) per Allen 2023.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-
-### Topical concentrations
-
-- **2–5% niacinamide** is the standard cosmeceutical concentration; Bissett 2004 used 5%.[^bissett-2004-topical-niacinamide-aging-facial-skin]
-- Available in dozens of products: The Ordinary Niacinamide 10% + Zinc 1% (\$6), Olay Total Effects, CeraVe Resurfacing Retinol Serum (with niacinamide), Paula's Choice 10% Niacinamide Booster, etc.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- Tolerated by all Fitzpatrick skin types; minimal irritation; compatible with most other actives (vit C, retinoids, AHAs).[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-- The popular "don't mix with vit C" claim is largely overstated — at modern formulation pH, niacinamide and vit C are stable together.[^marques-2024-niacinamide-multiple-functions-mechanism]
-
-### Safety
-
-- **Wide oral safety margin** — pellagra-prevention RDA is 14–18mg/day for adults; chemoprevention dose is 1g/day (~60× RDA); hepatotoxicity reported only at sustained doses >3g/day.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- **NO flushing** at any oral dose — distinct from niacin (nicotinic acid) which causes vasodilation at ≥30mg.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **Pregnancy + breastfeeding**: well-tolerated; vitamin B3 is a standard prenatal supplement component.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- Topical: essentially no safety concerns at cosmeceutical concentrations across all skin types.[^marques-2024-niacinamide-multiple-functions-mechanism][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-
-### When to consider
-
-**Oral nicotinamide chemoprevention (500mg BID)** — reasonable for:[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-- Immunocompetent adults with **history of ≥2 prior NMSCs** (matches Chen 2015 population — strongest evidence)[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]
-- Adults with **extensive actinic damage + multiple AKs** as adjunct to topical/procedural treatment[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- NOT for primary prevention in low-risk populations (no evidence)[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-- NOT for immunosuppressed populations (Allen 2023 null)[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-- Honest framing per Tan E 2026: "may consider given low cost + low harm + plausible benefit, but jury is still out — not synthesis-grade established"[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-
-**Topical niacinamide (2–5% in serum or moisturizer)** — reasonable for:[^bissett-2004-topical-niacinamide-aging-facial-skin][^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical][^marques-2024-niacinamide-multiple-functions-mechanism]
-- Mild-moderate hyperpigmentation (PIH, melasma) as combination therapy with vit C or hydroquinone[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]
-- Mild barrier dysfunction / xerosis[^marques-2024-niacinamide-multiple-functions-mechanism]
-- Adjunct in acne treatment routines (sebum + inflammation reduction)[^marques-2024-niacinamide-multiple-functions-mechanism]
-- General "well-tolerated cosmeceutical with modest evidence" use case[^lau-2024-cosmeceuticals-antiaging-systematic-review]
-- Don't expect retinoid-level or vit C-level effects on photoaging endpoints[^lau-2024-cosmeceuticals-antiaging-systematic-review]
+- **Off-label use is widespread in longevity clinics and self-experimentation**, far ahead of the evidence. The trial-derived **D+Q** schedule is dasatinib 100 mg + quercetin 1000 mg for 3 consecutive days, repeated every 2–4 weeks — the regimen used in the IPF and DKD studies, not validated for healthy adults.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney]
+- **Fisetin** is consumer-accessible as a supplement; common self-dosing (~1500–2000 mg/day for 2–3 consecutive days monthly) is **extrapolated from mouse data, not from any human efficacy trial** — and the one gold-standard animal test, the NIA ITP, found no lifespan extension or senescent-cell clearance at the dose it used.[^yousefzadeh-2018-fisetin-senolytic][^harrison-2023-itp-fisetin-astaxanthin] The registered fisetin trials (Mayo's AFFIRM-LITE and AFFIRM frailty trials) have not reported primary outcomes, and oral bioavailability is poor. Treat the dose as unvalidated.
+- **Side effects**: in the senolytic regimen (brief, low cumulative exposure) D+Q was generally well-tolerated in the IPF, DKD, and Alzheimer's trials.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney][^gonzales-2023-senolytics-alzheimers-phase1] At *continuous oncology doses* dasatinib carries bleeding/bruising (thrombocytopenia), pleural effusion (~26% long-term), pulmonary arterial hypertension, QTc prolongation, and CYP3A4 interactions — so cycling frequency, not single doses, is the relevant safety variable; quercetin can cause GI upset.[^cheng-2023-dasatinib-adverse-reactions-cml-review]
+- **Monitoring**: baseline and periodic CBC and liver enzymes are prudent in repeated use, and baseline echocardiography is advised before dasatinib given its cardiopulmonary profile; senolytics are intended as periodic pulses, not daily chronic medication.[^cheng-2023-dasatinib-adverse-reactions-cml-review]
+- Senolytics are distinct from **senomorphics** — agents such as [rapamycin](rapamycin.md) and [metformin](metformin.md) that suppress the SASP / inflammaging output of senescent cells *without killing them*. Metformin, for example, restores autophagy and dampens the Th17 inflammaging profile of aged human T cells, a senomorphic mode of action — so despite frequent loose framing, **metformin is not a senolytic**.[^zhu-2015-senolytic-discovery-d-q][^bharath-2020-metformin-autophagy-inflammaging][^chaib-2022-senolytics-path-to-clinic] Senomorphics generally need continuous dosing to keep the SASP suppressed, whereas senolytics act in intermittent pulses; the net-benefit comparison between the two strategies is unsettled.[^chaib-2022-senolytics-path-to-clinic]
 
 ## What we don't know
 
-- **Whether chemoprevention efficacy generalizes beyond ≥2-NMSC immunocompetent populations** — Chen 2015 anchored the evidence in a narrow high-risk cohort; broader populations untested.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]
-- **Whether nicotinamide chemoprevention works in any immunosuppressed population** — Allen 2023 null in transplant recipients; other immunosuppressed populations (HIV+, chronic immunosuppressive medications for autoimmune disease) untested.[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]
-- **Long-term oral safety beyond 12 months** — the chemoprevention dose (1g/day) is well-tolerated in trial settings to 12 months; long-term (years) safety data is sparse.[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention][^kapala-2022-isotretinoin-adverse-events-meta]
-- **Whether nicotinamide adds to outcomes vs NMN or NR** in direct head-to-head trials — no human RCTs compare these NAD+ precursors on clinical outcomes. Martens 2018 (NR) + Igarashi 2022 (NMN) establish biomarker (plasma NAD+) evidence; no Phase 3 clinical outcome trials exist.[^martens-2018-nicotinamide-riboside-healthy-adults-nad][^igarashi-2022-nmn-chronic-supplementation-blood-nad-older][^verdin-2015-nad-aging-neurodegeneration]
-- **Whether topical niacinamide meaningfully reduces photoaging endpoints** vs vehicle in synthesis-grade evidence — Lau 2024 explicitly excluded niacinamide for lack of qualifying RCTs; the field-wide trial quality is the limit.[^lau-2024-cosmeceuticals-antiaging-systematic-review]
-- **Optimal topical concentration + frequency + combination strategies** — concentrations from 2% to 10% are marketed; head-to-head dose-response RCTs in well-defined populations are sparse.[^marques-2024-niacinamide-multiple-functions-mechanism]
-- **Whether nicotinamide chemoprevention extends to melanoma** — Chen 2015 + Allen 2023 measured NMSC; melanoma risk reduction is a different question. Tosti 2023's one dietary-niacin observational study suggested potential SCC benefit but no melanoma signal.[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]
-- **The concentration-dependent dual mechanism (NAD+ substrate at low doses, SIRT1/PARP1 inhibitor at high doses)** has not been clinically dose-titrated — could clinical effects be tuned by dose-stratification?[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]
+- **Whether senolytics benefit healthy aging adults.** Every human trial to date is in a defined disease (IPF, DKD, AD, OA); the healthy-aging use that dominates off-label practice is entirely unstudied.[^justice-2019-senolytics-ipf][^hickson-2019-senolytics-diabetic-kidney]
+- **Human lifespan / mortality / hard-outcome effects.** No trial has been long enough or powered for clinical endpoints; the ~25–36% lifespan figures are mouse data.[^baker-2016-naturally-occurring-p16-lifespan][^xu-2018-senescent-cells-physical-dysfunction]
+- **The cost of clearing beneficial senescence.** Because senescence suppresses tumors and aids wound healing, the long-term safety of repeated clearance — especially the cancer-risk balance — is unresolved.[^campisi-2013-aging-senescence-cancer][^demaria-2017-senescence-cancer-recurrence]
+- **Which senescent cells, in which tissues.** Senescent-cell types differ by tissue and SCAP dependency; D+Q clears some better than others, and no agent is comprehensive. Validated **senescence-burden biomarkers** (e.g., the SASP panel of GDF15, TNFR1, OPN, and related factors) are still being established as trial endpoints.[^schafer-2020-sasp-senescence-medical-risk]
+- **Optimal agent, dose, and schedule** in humans — and whether any senolytic *drug* will achieve a replicated, multi-site mouse-lifespan result like rapamycin's. The one senolytic the NIA ITP has tested for lifespan, fisetin, neither extended life nor cleared senescent cells; D+Q has not been ITP-tested for lifespan.[^harrison-2009-itp-rapamycin-lifespan][^harrison-2023-itp-fisetin-astaxanthin]
 
 <!-- begin-refs -->
 
-[^marques-2024-niacinamide-multiple-functions-mechanism]: Marques C, Hadjab F, Porcello A, Lourenço K, Scaletta C, Abdel-Sayed P, et al.<br>
-    [Mechanistic Insights into the Multiple Functions of Niacinamide: Therapeutic Implications and Cosmeceutical Applications in Functional Skincare Products](https://doi.org/10.3390/antiox13040425).<br>
-    *Antioxidants*. 2024;13(4):425.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 78</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
+[^coppe-2008-sasp-secretory-phenotype]: Coppé J-P, Patil CK, Rodier F, Sun Y, Muñoz DP, Goldstein J, et al.<br>
+    [Senescence-Associated Secretory Phenotypes Reveal Cell-Nonautonomous Functions of Oncogenic RAS and the p53 Tumor Suppressor](https://doi.org/10.1371/journal.pbio.0060301).<br>
+    *PLoS Biology*. 2008;6(12):e301.<br>
+    `2008`
 
-[^verdin-2015-nad-aging-neurodegeneration]: Verdin E.<br>
-    [NAD <sup>+</sup> in aging, metabolism, and neurodegeneration](https://doi.org/10.1126/science.aac4854).<br>
-    *Science*. 2015;350(6265):1208–1213.<br>
-    <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2015</span>
+[^childs-2015-cellular-senescence-aging]: Childs BG, Durik M, Baker DJ, van Deursen JM.<br>
+    [Cellular senescence in aging and age-related disease: from mechanisms to therapy](https://doi.org/10.1038/nm.4000).<br>
+    *Nature Medicine*. 2015;21(12):1424–1435.<br>
+    `narrative` `💵 NIH` `❝2,262` `2015`
 
-[^chen-2015-ontrac-nicotinamide-skin-cancer-chemoprevention]: Chen AC, Martin AJ, Choy B, Fernández-Peñas P, Dalziell RA, McKenzie CA, et al.<br>
-    [A Phase 3 Randomized Trial of Nicotinamide for Skin-Cancer Chemoprevention](https://doi.org/10.1056/nejmoa1506197).<br>
-    *New England Journal of Medicine*. 2015;373(17):1618–1626.<br>
-    <span class="badge badge-design" title="Randomized controlled trial — participants randomly assigned to intervention or control; the gold standard for causal inference about intervention effects.">rct</span> <span class="badge badge-n">n=386</span> <span class="badge badge-outcome" title="Clinical outcome — directly meaningful to patients (death, MI, stroke, dementia diagnosis, hospitalization, fracture, quality of life).">clinical</span> <span class="badge badge-pre-reg" title="Pre-registered — protocol registered before participants enrolled, reducing outcome-switching and other p-hacking.">pre-reg</span> <span class="badge badge-funding">💵 NHMRC Australia (Blackmores donated tablets)</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 618</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2015</span>
+[^baker-2016-naturally-occurring-p16-lifespan]: Baker DJ, Childs BG, Durik M, Wijers ME, Sieben CJ, Zhong J, et al.<br>
+    [Naturally occurring p16Ink4a-positive cells shorten healthy lifespan](https://doi.org/10.1038/nature16932).<br>
+    *Nature*. 2016;530(7589):184–189.<br>
+    `2016`
 
-[^allen-2023-ontrac-2-nicotinamide-transplant-recipients]: Allen NC, Martin AJ, Snaidr VA, Eggins R, Chong AH, Fernandéz-Peñas P, et al.<br>
-    [Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients](https://doi.org/10.1056/nejmoa2203086).<br>
-    *New England Journal of Medicine*. 2023;388(9):804–812.<br>
-    <span class="badge badge-design" title="Randomized controlled trial — participants randomly assigned to intervention or control; the gold standard for causal inference about intervention effects.">rct</span> <span class="badge badge-n">n=158</span> <span class="badge badge-outcome" title="Clinical outcome — directly meaningful to patients (death, MI, stroke, dementia diagnosis, hospitalization, fracture, quality of life).">clinical</span> <span class="badge badge-pre-reg" title="Pre-registered — protocol registered before participants enrolled, reducing outcome-switching and other p-hacking.">pre-reg</span> <span class="badge badge-funding">💵 NHMRC Australia</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 96</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2023</span>
+[^xu-2018-senescent-cells-physical-dysfunction]: Xu M, Pirtskhalava T, Farr JN, Weigand BM, Palmer AK, Weivoda MM, et al.<br>
+    [Senolytics improve physical function and increase lifespan in old age](https://doi.org/10.1038/s41591-018-0092-9).<br>
+    *Nature Medicine*. 2018;24(8):1246–1256.<br>
+    `2018`
 
-[^tosti-2023-nicotinamide-nmsc-chemoprevention-sr-meta]: Tosti G, Pepe F, Gnagnarella P, Silvestri F, Gaeta A, Queirolo P, et al.<br>
-    [The Role of Nicotinamide as Chemo-Preventive Agent in NMSCs: A Systematic Review and Meta-Analysis](https://doi.org/10.3390/nu16010100).<br>
-    *Nutrients*. 2023;16(1):100.<br>
-    <span class="badge badge-review-type" title="Meta-analysis — pools quantitative effect estimates from multiple studies into a single pooled estimate.">meta</span> <span class="badge badge-n">n=4</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 19</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2023</span>
+[^justice-2019-senolytics-ipf]: Justice JN, Nambiar AM, Tchkonia T, LeBrasseur NK, Pascual R, Hashmi SK, et al.<br>
+    [Senolytics in idiopathic pulmonary fibrosis: Results from a first-in-human, open-label, pilot study](https://doi.org/10.1016/j.ebiom.2018.12.052).<br>
+    *EBioMedicine*. 2019;40:554–563.<br>
+    `2019`
 
-[^tan-e-2026-nicotinamide-skin-cancer-chemoprevention-jury]: Tan E, Williams HC.<br>
-    [Nicotinamide for Skin Cancer Chemoprevention: The Jury Was Out and Still is](https://doi.org/10.1007/s40257-025-01005-y).<br>
-    *American Journal of Clinical Dermatology*. 2026;27(2):209–215.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 2</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2026</span>
+[^hickson-2019-senolytics-diabetic-kidney]: Hickson LJ, Langhi Prata LG, Bobart SA, Evans TK, Giorgadze N, Hashmi SK, et al.<br>
+    [Senolytics decrease senescent cells in humans: Preliminary report from a clinical trial of Dasatinib plus Quercetin in individuals with diabetic kidney disease](https://doi.org/10.1016/j.ebiom.2019.08.069).<br>
+    *EBioMedicine*. 2019;47:446–456.<br>
+    `2019`
 
-[^schmults-2024-nccn-basal-cell-carcinoma-guideline]: Schmults CD, Blitzblau R, Aasi SZ, Alam M, Amini A, Bibee K, et al.<br>
-    [Basal Cell Skin Cancer, Version 2.2024, NCCN Clinical Practice Guidelines in Oncology](https://doi.org/10.6004/jnccn.2023.0056).<br>
-    *Journal of the National Comprehensive Cancer Network*. 2023;21(11):1181–1203.<br>
-    <span class="badge badge-class" title="Clinical guideline or expert consensus statement.">guideline</span> <span class="badge badge-funding">💵 NCCN</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 111</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2023</span>
+[^nambiar-2023-senolytics-ipf-rct]: Nambiar A, Kellogg D, Justice J, Goros M, Gelfond J, Pascual R, et al.<br>
+    [Senolytics dasatinib and quercetin in idiopathic pulmonary fibrosis: results of a phase I, single-blind, single-center, randomized, placebo-controlled pilot trial on feasibility and tolerability](https://doi.org/10.1016/j.ebiom.2023.104481).<br>
+    *eBioMedicine*. 2023;90:104481.<br>
+    `rct (n=12)` `clinical` `prereg` `💵 NIH` `❝236` `2023`
 
-[^kandolf-2024-eadv-actinic-keratosis-guideline]: Kandolf L, Peris K, Malvehy J, Mosterd K, Heppt MV, Fargnoli MC, et al.<br>
-    [European consensus‐based interdisciplinary guideline for diagnosis, treatment and prevention of actinic keratoses, epithelial <scp>UV</scp>‐induced dysplasia and field cancerization on behalf of European Association of Dermato‐Oncology, European Dermatology Forum, European Academy of Dermatology and Venereology and Union of Medical Specialists (Union Européenne des Médecins Spécialistes)](https://doi.org/10.1111/jdv.19897).<br>
-    *Journal of the European Academy of Dermatology and Venereology*. 2024;38(6):1024–1047.<br>
-    <span class="badge badge-class" title="Clinical guideline or expert consensus statement.">guideline</span> <span class="badge badge-funding">💵 EADV</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 67</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
+[^chaib-2022-senolytics-path-to-clinic]: Chaib S, Tchkonia T, Kirkland JL.<br>
+    [Cellular senescence and senolytics: the path to the clinic](https://doi.org/10.1038/s41591-022-01923-y).<br>
+    *Nature Medicine*. 2022;28(8):1556–1568.<br>
+    `narrative` `💵 NIA` `❝1,010` `2022`
 
-[^bissett-2004-topical-niacinamide-aging-facial-skin]: Bissett DL, Miyamoto K, Sun P, Li J, Berge CA.<br>
-    [Topical niacinamide reduces yellowing, wrinkling, red blotchiness, and hyperpigmented spots in aging facial skin<sup>1</sup>](https://doi.org/10.1111/j.1467-2494.2004.00228.x).<br>
-    *International Journal of Cosmetic Science*. 2004;26(5):231–238.<br>
-    <span class="badge badge-design" title="Randomized controlled trial — participants randomly assigned to intervention or control; the gold standard for causal inference about intervention effects.">rct</span> <span class="badge badge-n">n=50</span> <span class="badge badge-outcome" title="Surrogate outcome — measured proxy expected to predict the clinical outcome (LDL, blood pressure, biomarker change, DNAm clock age); the surrogate-to-clinical translation is itself an empirical question.">surrogate</span> <span class="badge badge-funding">💵 Procter & Gamble</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 184</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2004</span>
+[^campisi-2013-aging-senescence-cancer]: Campisi J.<br>
+    [Aging, Cellular Senescence, and Cancer](https://doi.org/10.1146/annurev-physiol-030212-183653).<br>
+    *Annual Review of Physiology*. 2013;75(1):685–705.<br>
+    `narrative` `💵 NIH` `💵 NIA` `❝2,867` `2013`
 
-[^boo-2021-niacinamide-skin-aging-pigmentation-mechanistic-clinical]: Boo YC.<br>
-    [Mechanistic Basis and Clinical Evidence for the Applications of Nicotinamide (Niacinamide) to Control Skin Aging and Pigmentation](https://doi.org/10.3390/antiox10081315).<br>
-    *Antioxidants*. 2021;10(8):1315.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 174</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2021</span>
+[^lopez-otin-2023-hallmarks-aging-update]: López-Otín C, Blasco MA, Partridge L, Serrano M, Kroemer G.<br>
+    [Hallmarks of aging: An expanding universe](https://doi.org/10.1016/j.cell.2022.11.001).<br>
+    *Cell*. 2023;186(2):243–278.<br>
+    `narrative` `💵 ERC` `💵 AEI Spain` `❝5,362` `2023`
 
-[^lau-2024-cosmeceuticals-antiaging-systematic-review]: Lau M, Mineroff Gollogly J, Wang JY, Jagdeo J.<br>
-    [Cosmeceuticals for antiaging: a systematic review of safety and efficacy](https://doi.org/10.1007/s00403-024-02908-2).<br>
-    *Archives of Dermatological Research*. 2024;316(5):173.<br>
-    <span class="badge badge-review-type" title="Systematic review — comprehensive prespecified-protocol literature search and synthesis, without quantitative pooling.">systematic</span> <span class="badge badge-n">1,236 studies</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 18</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
+[^zhu-2015-senolytic-discovery-d-q]: Zhu Y, Tchkonia T, Pirtskhalava T, Gower AC, Ding H, Giorgadze N, et al.<br>
+    [The Achilles’ heel of senescent cells: from transcriptome to senolytic drugs](https://doi.org/10.1111/acel.12344).<br>
+    *Aging Cell*. 2015;14(4):644–658.<br>
+    `2015`
 
-[^hui-2020-nicotinamide-glaucoma-inner-retinal-function-rct]: Hui F, Tang J, Williams PA, McGuinness MB, Hadoux X, Casson RJ, et al.<br>
-    [Improvement in inner retinal function in glaucoma with nicotinamide (vitamin <scp>B3</scp> ) supplementation: A crossover randomized clinical trial](https://doi.org/10.1111/ceo.13818).<br>
-    *Clinical &amp; Experimental Ophthalmology*. 2020;48(7):903–914.<br>
-    <span class="badge badge-design" title="Crossover trial — each participant receives every condition in randomized order, serving as their own control; reduces between-subject variance but vulnerable to carryover and period effects.">crossover</span> <span class="badge badge-n">n=57</span> <span class="badge badge-outcome" title="Surrogate outcome — measured proxy expected to predict the clinical outcome (LDL, blood pressure, biomarker change, DNAm clock age); the surrogate-to-clinical translation is itself an empirical question.">surrogate</span> <span class="badge badge-pre-reg" title="Pre-registered — protocol registered before participants enrolled, reducing outcome-switching and other p-hacking.">pre-reg</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 219</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2020</span>
+[^yousefzadeh-2018-fisetin-senolytic]: Yousefzadeh MJ, Zhu Y, McGowan SJ, Angelini L, Fuhrmann-Stroissnigg H, Xu M, et al.<br>
+    [Fisetin is a senotherapeutic that extends health and lifespan](https://doi.org/10.1016/j.ebiom.2018.09.015).<br>
+    *EBioMedicine*. 2018;36:18–28.<br>
+    `2018`
 
-[^nikas-2020-nicotinamide-cancer-chemoprevention-therapy-review]: Nikas IP, Paschou SA, Ryu HS.<br>
-    [The Role of Nicotinamide in Cancer Chemoprevention and Therapy](https://doi.org/10.3390/biom10030477).<br>
-    *Biomolecules*. 2020;10(3):477.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> <span class="badge badge-funding">💵 Korea Health Industry Development Institute</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 133</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2020</span>
+[^harrison-2023-itp-fisetin-astaxanthin]: Harrison DE, Strong R, Reifsnyder P, Rosenthal N, Korstanje R, Fernandez E, et al.<br>
+    [Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used](https://doi.org/10.1007/s11357-023-01011-0).<br>
+    *GeroScience*. 2023;46(1):795–816.<br>
+    `rct (🐭, n=584)` `clinical` `prereg` `💵 NIA` `❝51` `2023`
 
-[^imai-2000-sir2-nad-deacetylase]: Imai S-i, Armstrong CM, Kaeberlein M, Guarente L.<br>
-    [Transcriptional silencing and longevity protein Sir2 is an NAD-dependent histone deacetylase](https://doi.org/10.1038/35001622).<br>
-    *Nature*. 2000;403(6771):795–800.<br>
-    <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2000</span>
+[^zhu-2016-navitoclax-senolytic]: Zhu Y, Tchkonia T, Fuhrmann‐Stroissnigg H, Dai HM, Ling YY, Stout MB, et al.<br>
+    [Identification of a novel senolytic agent, navitoclax, targeting the Bcl‐2 family of anti‐apoptotic factors](https://doi.org/10.1111/acel.12445).<br>
+    *Aging Cell*. 2016;15(3):428–435.<br>
+    `🧫` `mechanism` `💵 NIA` `❝1,090` `2016`
 
-[^martens-2018-nicotinamide-riboside-healthy-adults-nad]: Martens CR, Denman BA, Mazzo MR, Armstrong ML, Reisdorph N, McQueen MB, et al.<br>
-    [Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults](https://doi.org/10.1038/s41467-018-03421-7).<br>
-    *Nature Communications*. 2018;9(1):1286.<br>
-    <span class="badge badge-design" title="Randomized controlled trial — participants randomly assigned to intervention or control; the gold standard for causal inference about intervention effects.">rct</span> <span class="badge badge-n">n=30</span> <span class="badge badge-outcome" title="Surrogate outcome — measured proxy expected to predict the clinical outcome (LDL, blood pressure, biomarker change, DNAm clock age); the surrogate-to-clinical translation is itself an empirical question.">surrogate</span> <span class="badge badge-pre-reg" title="Pre-registered — protocol registered before participants enrolled, reducing outcome-switching and other p-hacking.">pre-reg</span> <span class="badge badge-funding">💵 ChromaDex</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 567</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2018</span>
+[^macha-2024-ubx1325-erg-namd]: Macha N, Yu M, Sapieha P, Klier S, Ghosh A, White L, et al.<br>
+    [Multifocal Electroretinography Changes after UBX1325 (Foselutoclax) Treatment in Neovascular Age-Related Macular Degeneration](https://doi.org/10.3390/jcm13185540).<br>
+    *Journal of Clinical Medicine*. 2024;13(18):5540.<br>
+    `single-arm (n=5)` `surrogate` `💵 UNITY Biotechnology` `❝3` `2024`
 
-[^igarashi-2022-nmn-chronic-supplementation-blood-nad-older]: Igarashi M, Nakagawa-Nagahama Y, Miura M, Kashiwabara K, Yaku K, Sawada M, et al.<br>
-    [Chronic nicotinamide mononucleotide supplementation elevates blood nicotinamide adenine dinucleotide levels and alters muscle function in healthy older men](https://doi.org/10.1038/s41514-022-00084-z).<br>
-    *npj Aging*. 2022;8(1):5.<br>
-    <span class="badge badge-design" title="Randomized controlled trial — participants randomly assigned to intervention or control; the gold standard for causal inference about intervention effects.">rct</span> <span class="badge badge-n">n=42</span> <span class="badge badge-outcome" title="Surrogate outcome — measured proxy expected to predict the clinical outcome (LDL, blood pressure, biomarker change, DNAm clock age); the surrogate-to-clinical translation is itself an empirical question.">surrogate</span> <span class="badge badge-pre-reg" title="Pre-registered — protocol registered before participants enrolled, reducing outcome-switching and other p-hacking.">pre-reg</span> <span class="badge badge-funding">💵 Mitsubishi</span> <span class="badge badge-funding">Oriental Yeast</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 106</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2022</span>
+[^triana-martinez-2019-cardiac-glycosides-senolytic]: Triana-Martínez F, Picallos-Rabina P, Da Silva-Álvarez S, Pietrocola F, Llanos S, Rodilla V, et al.<br>
+    [Identification and characterization of Cardiac Glycosides as senolytic compounds](https://doi.org/10.1038/s41467-019-12888-x).<br>
+    *Nature Communications*. 2019;10(1):4731.<br>
+    `🧫` `mechanism` `💵 AEI Spain` `❝374` `2019`
 
-[^hakozaki-2002-niacinamide-melanosome-transfer-pigmentation]: Hakozaki T, Minwalla L, Zhuang J, Chhoa M, Matsubara A, Miyamoto K, et al.<br>
-    [The effect of niacinamide on reducing cutaneous pigmentation and suppression of melanosome transfer](https://doi.org/10.1046/j.1365-2133.2002.04834.x).<br>
-    *British Journal of Dermatology*. 2002;147(1):20–31.<br>
-    <span class="badge badge-n">n=120</span> <span class="badge badge-outcome" title="Mechanism endpoint — cellular or molecular readout (gene expression, protein activity), more upstream than a surrogate.">mechanism</span> `💵 Procter & Gamble` <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 458</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2002</span>
+[^amor-2020-senolytic-car-t]: Amor C, Feucht J, Leibold J, Ho Y-J, Zhu C, Alonso-Curbelo D, et al.<br>
+    [Senolytic CAR T cells reverse senescence-associated pathologies](https://doi.org/10.1038/s41586-020-2403-9).<br>
+    *Nature*. 2020;583(7814):127–132.<br>
+    `🐭` `mechanism` `💵 NIA` `💵 HHMI` `❝1,021` `2020`
 
-[^mainville-2022-nicotinamide-skin-cancer-chemoprophylaxis-meta]: Mainville L, Smilga A-S, Fortin PR.<br>
-    [Effect of Nicotinamide in Skin Cancer and Actinic Keratoses Chemoprophylaxis, and Adverse Effects Related to Nicotinamide: A Systematic Review and Meta-Analysis](https://doi.org/10.1177/12034754221078201).<br>
-    *Journal of Cutaneous Medicine and Surgery*. 2022;26(3):297–308.<br>
-    <span class="badge badge-review-type" title="Meta-analysis — pools quantitative effect estimates from multiple studies into a single pooled estimate.">meta</span> <span class="badge badge-n">n=29</span> <span class="badge badge-funding">💵 undisclosed</span> <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 33</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2022</span>
+[^baker-2011-senescent-cells-clearance]: Baker DJ, Wijshake T, Tchkonia T, LeBrasseur NK, Childs BG, van de Sluis B, et al.<br>
+    [Clearance of p16Ink4a-positive senescent cells delays ageing-associated disorders](https://doi.org/10.1038/nature10600).<br>
+    *Nature*. 2011;479(7372):232–236.<br>
+    `2011`
 
-[^migaud-2024-nad-metabolism-targeting-challenges-review]: Migaud ME, Ziegler M, Baur JA.<br>
-    [Regulation of and challenges in targeting NAD+ metabolism](https://doi.org/10.1038/s41580-024-00752-w).<br>
-    *Nature Reviews Molecular Cell Biology*. 2024;25(10):822–840.<br>
-    <mark>narrative</mark> <mark>💵 undisclosed<mark> <mark>❝ 92</mark> <mark>2024</mark>
+[^harrison-2009-itp-rapamycin-lifespan]: Harrison DE, Strong R, Sharp ZD, Nelson JF, Astle CM, Flurkey K, et al.<br>
+    [Rapamycin fed late in life extends lifespan in genetically heterogeneous mice](https://doi.org/10.1038/nature08221).<br>
+    *Nature*. 2009;460(7253):392–395.<br>
+    `rct (🐭, n=1,901)` `clinical` `prereg` `💵 NIA` `❝3,716` `2009`
 
-[^kapala-2022-isotretinoin-adverse-events-meta]: Kapała J, Lewandowska J, Placek W, Owczarczyk-Saczonek A.<br>
-    [Adverse Events in Isotretinoin Therapy: A Single-Arm Meta-Analysis](https://doi.org/10.3390/ijerph19116463).<br>
-    *International Journal of Environmental Research and Public Health*. 2022;19(11):6463.<br>
-    <mark>❝50<mark> <mark>2022</mark>
+[^gonzales-2023-senolytics-alzheimers-phase1]: Gonzales MM, Garbarino VR, Kautz TF, Palavicini JP, Lopez-Cruzan M, Dehkordi SK, et al.<br>
+    [Senolytic therapy in mild Alzheimer’s disease: a phase 1 feasibility trial](https://doi.org/10.1038/s41591-023-02543-w).<br>
+    *Nature Medicine*. 2023;29(10):2481–2488.<br>
+    `single-arm (n=5)` `surrogate` `prereg` `💵 NIA` `💵 Alzheimer's Association` `❝232` `2023`
+
+[^camell-2021-senolytics-coronavirus-mortality]: Camell CD, Yousefzadeh MJ, Zhu Y, Prata LGPL, Huggins MA, Pierson M, et al.<br>
+    [Senolytics reduce coronavirus-related mortality in old mice](https://doi.org/10.1126/science.abe4832).<br>
+    *Science*. 2021;373(6552):eabe4832.<br>
+    `🐭` `clinical` `💵 NIA` `❝318` `2021`
+
+[^cheng-2023-dasatinib-adverse-reactions-cml-review]: Cheng F, Xu Q, Li Q, Cui Z, Li W, Zeng F.<br>
+    [Adverse reactions after treatment with dasatinib in chronic myeloid leukemia: Characteristics, potential mechanisms, and clinical management strategies](https://doi.org/10.3389/fonc.2023.1113462).<br>
+    *Frontiers in Oncology*. 2023;13:1113462.<br>
+    `narrative` `💵 ❓` `❝33` `2023`
+
+[^bharath-2020-metformin-autophagy-inflammaging]: Bharath LP, Agrawal M, McCambridge G, Nicholas DA, Hasturk H, Liu J, et al.<br>
+    [Metformin Enhances Autophagy and Normalizes Mitochondrial Function to Alleviate Aging-Associated Inflammation](https://doi.org/10.1016/j.cmet.2020.04.015).<br>
+    *Cell Metabolism*. 2020;32(1):44–55.e6.<br>
+    `mechanism` `💵 NIA` `❝597` `2020`
+
+[^demaria-2017-senescence-cancer-recurrence]: Demaria M, O'Leary MN, Chang J, Shao L, Liu S, Alimirah F, et al.<br>
+    [Cellular Senescence Promotes Adverse Effects of Chemotherapy and Cancer Relapse](https://doi.org/10.1158/2159-8290.cd-16-0241).<br>
+    *Cancer Discovery*. 2017;7(2):165–176.<br>
+    `cohort (🐭, n=89)` `clinical` `💵 NIH` `💵 NIA` `❝1,291` `2017`
+
+[^schafer-2020-sasp-senescence-medical-risk]: Schafer MJ, Zhang X, Kumar A, Atkinson EJ, Zhu Y, Jachim S, et al.<br>
+    [The senescence-associated secretome as an indicator of age and medical risk](https://doi.org/10.1172/jci.insight.133668).<br>
+    *JCI Insight*. 2020;5(12):e133668.<br>
+    `2020`
 <!-- end-refs -->
