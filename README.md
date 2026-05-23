@@ -324,5 +324,5 @@ Topical + oral nicotinamide operate through several converging mechanisms:[^marq
 [^kapala-2022-isotretinoin-adverse-events-meta]: Kapała J, Lewandowska J, Placek W, Owczarczyk-Saczonek A.<br>
     [Adverse Events in Isotretinoin Therapy: A Single-Arm Meta-Analysis](https://doi.org/10.3390/ijerph19116463).<br>
     *International Journal of Environmental Research and Public Health*. 2022;19(11):6463.<br>
-    <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 50</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2022</span>
+    `❝50` <time>2022</time>
 <!-- end-refs -->
