@@ -319,10 +319,10 @@ Topical + oral nicotinamide operate through several converging mechanisms:[^marq
 [^migaud-2024-nad-metabolism-targeting-challenges-review]: Migaud ME, Ziegler M, Baur JA.<br>
     [Regulation of and challenges in targeting NAD+ metabolism](https://doi.org/10.1038/s41580-024-00752-w).<br>
     *Nature Reviews Molecular Cell Biology*. 2024;25(10):822–840.<br>
-    <span class="badge badge-review-type" title="Narrative review — author-selected synthesis of literature without a formal search protocol; vulnerable to selection bias.">narrative</span> `💵 undisclosed` <span class="badge badge-cites" title="Citations counted by OpenAlex (typically more conservative than Google Scholar).">❝ 92</span> <span class="badge badge-year" title="Year of publication. Older papers may have been superseded; very recent papers may not yet be replicated.">2024</span>
+    <mark>narrative</mark> <mark>💵 undisclosed<mark> <mark>❝ 92</mark> <mark>2024</mark>
 
 [^kapala-2022-isotretinoin-adverse-events-meta]: Kapała J, Lewandowska J, Placek W, Owczarczyk-Saczonek A.<br>
     [Adverse Events in Isotretinoin Therapy: A Single-Arm Meta-Analysis](https://doi.org/10.3390/ijerph19116463).<br>
     *International Journal of Environmental Research and Public Health*. 2022;19(11):6463.<br>
-    `❝50` <time>2022</time>
+    <mark>❝50<mark> <mark>2022</mark>
 <!-- end-refs -->
